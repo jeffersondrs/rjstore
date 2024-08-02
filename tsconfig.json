@@ -1,5 +1,6 @@
 {
   "extends": "expo/tsconfig.base",
+  "useDefineForClassFields": true,
   "compilerOptions": {
     "strict": true,
     "paths": {

@@ -1,3 +1,5 @@
-import Product from "./Product/index";
+import CardProduct from "./CardProduct/index";
+import Button from "./Button";
+import CardCategory from "./CardCategory";
 
-export { Product };
+export { CardProduct, Button, CardCategory };

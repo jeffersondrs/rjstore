@@ -1,6 +1,7 @@
 import React from "react";
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import { Text, View, Image } from "react-native";
 import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import Button from "../Button";
 
 type ProductProps = {
   title: string;
@@ -34,25 +35,16 @@ export default function Product({
           )}
           <Text
             className={`
-          text-sm
+          text-sm tracking-wider
           ${discount ? "line-through text-gray-400" : "text-gray-900 font-bold"}
           `}
           >
             R$ {price}/un
           </Text>
         </View>
-        <Text className="text-xs">{title}</Text>
+        <Text className="text-xs tracking-widest">{title}</Text>
       </View>
-      <View className="p-2 w-full h-12 flex flex-row items-center justify-center ">
-        <TouchableOpacity
-          className="bg-sky-600 text-white px-4 py-2 rounded-lg mx-2 w-full "
-          onPress={() => {}}
-        >
-          <Text className="text text-center text-gray-50 font-medium ">
-            Adicionar
-          </Text>
-        </TouchableOpacity>
-      </View>
+      <Button title="Adicionar" onPress={() => {}} />
       <View className="absolute top-1 right-1 rounded-tr-lg">
         {discount && (
           <View className="relative justify-center items-center">
