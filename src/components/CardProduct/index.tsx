@@ -19,9 +19,9 @@ export default function Product({
   percentage,
 }: ProductProps) {
   return (
-    <View className="w-48 shadow-gray-500 shadow-sm rounded-lg relative h-72 overflow-hidden bg-white flex flex-col justify-between items-center">
+    <View className="w-48 h-80 shadow-gray-500 shadow-sm rounded-lg relative overflow-hidden bg-white flex flex-col justify-between items-center my-1">
       <Image
-        className="w-full h-48 object-cover object-center rounded-t-lg"
+        className="w-full h-52 object-cover object-center rounded-t-lg"
         source={{
           uri: urlImage,
         }}
@@ -44,7 +44,10 @@ export default function Product({
         </View>
         <Text className="text-xs tracking-widest">{title}</Text>
       </View>
+      <View className="flex-rol justify-center items-center w-full p-3">
+
       <Button title="Adicionar" onPress={() => {}} />
+      </View>
       <View className="absolute top-1 right-1 rounded-tr-lg">
         {discount && (
           <View className="relative justify-center items-center">

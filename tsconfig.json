@@ -2,6 +2,7 @@
   "extends": "expo/tsconfig.base",
   "useDefineForClassFields": true,
   "compilerOptions": {
+    "jsx": "react",
     "strict": true,
     "paths": {
       "@/*": [
