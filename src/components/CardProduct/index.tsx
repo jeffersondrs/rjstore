@@ -1,7 +1,7 @@
-import React from "react";
-import { Text, View, Image } from "react-native";
-import MaterialIcons from "@expo/vector-icons/MaterialIcons";
-import Button from "../Button";
+import React from 'react';
+import { Text, View, Image } from 'react-native';
+import MaterialIcons from '@expo/vector-icons/MaterialIcons';
+import Button from '../Button';
 
 type ProductProps = {
   title: string;
@@ -36,7 +36,7 @@ export default function Product({
           <Text
             className={`
           text-sm tracking-wider
-          ${discount ? "line-through text-gray-400" : "text-gray-900 font-bold"}
+          ${discount ? 'line-through text-gray-400' : 'text-gray-900 font-bold'}
           `}
           >
             R$ {price}/un
@@ -45,8 +45,7 @@ export default function Product({
         <Text className="text-xs tracking-widest">{title}</Text>
       </View>
       <View className="flex-rol justify-center items-center w-full p-3">
-
-      <Button title="Adicionar" onPress={() => {}} />
+        <Button title="Adicionar" onPress={() => {}} />
       </View>
       <View className="absolute top-1 right-1 rounded-tr-lg">
         {discount && (

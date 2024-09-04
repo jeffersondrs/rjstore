@@ -1,6 +1,6 @@
-import React from "react";
-import { View, Text } from "react-native";
-import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import React from 'react';
+import { View, Text } from 'react-native';
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 type RangeProps = {
   title: string;

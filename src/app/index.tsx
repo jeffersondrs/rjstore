@@ -1,9 +1,16 @@
-import React from "react";
-import { View, ScrollView, SafeAreaView } from "react-native";
-import { CardProduct, CardCategory, Banner, Splash, Range } from "../components";
-import { FlashList } from "@shopify/flash-list";
-import { data as products, categoryData } from "../utils/data";
-import { observer } from "mobx-react-lite";
+import React from 'react';
+import { View, ScrollView, SafeAreaView } from 'react-native';
+import {
+  CardProduct,
+  CardCategory,
+  Banner,
+  Splash,
+  Range,
+} from '../components';
+import { FlashList } from '@shopify/flash-list';
+import { data as products, categoryData } from '../utils/data';
+import { observer } from 'mobx-react-lite';
+import { Link } from 'expo-router';
 
 const Index = observer(() => {
   return (
@@ -31,6 +38,14 @@ const Index = observer(() => {
         </View>
         <View className="w-full rounded-xl relative">
           <Banner />
+        </View>
+        <View className="w-full flex flex-col justify-center items-center py-2">
+          <Link
+            href="/(tabs)"
+            className="text-gray-50 font-bold text-lg rounded-sm py-2 bg-black w-40 text-center"
+          >
+            Ver mais
+          </Link>
         </View>
         <View>
           <Range title="Frete Grátis" icon="truck-fast" />

@@ -1,5 +1,5 @@
-import React from "react";
-import { Text, View, Image, TouchableOpacity } from "react-native";
+import React from 'react';
+import { Text, View, Image, TouchableOpacity } from 'react-native';
 
 type CategoryProps = {
   title: string;
@@ -16,7 +16,9 @@ export default function Category({ title, urlImage }: CategoryProps) {
         }}
       />
       <View className="items-center justify-evenly flex flex-col w-full h-12 px-1">
-        <Text className="text-sm font-bold tracking-widest text-center w-full">{title}</Text>
+        <Text className="text-sm font-bold tracking-widest text-center w-full">
+          {title}
+        </Text>
       </View>
     </TouchableOpacity>
   );

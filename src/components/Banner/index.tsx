@@ -11,7 +11,6 @@ const photos = [
   `https://images.unsplash.com/photo-1562802378-063ec186a863?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHN1c2hpfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60`,
 ];
 
-
 export default function Gallery() {
   const { width } = useWindowDimensions();
   const [[index, direction], setState] = useState([0, 0]);
@@ -76,10 +75,13 @@ export default function Gallery() {
           className="text-lg bg-white h-6 w-6 rounded-full text-center"
           onPress={paginate(1)}
         >
-          <MaterialCommunityIcons name="chevron-right" size={20} color="black" />
+          <MaterialCommunityIcons
+            name="chevron-right"
+            size={20}
+            color="black"
+          />
         </Text>
       </View>
     </View>
   );
 }
-
