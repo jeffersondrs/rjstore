@@ -1,19 +1,17 @@
-import Reat from 'react';
-import { Text, View, TouchableOpacity } from 'react-native';
+import React from 'react';
+import { Text, TouchableOpacity } from 'react-native';
 
 type ButtonProps = {
-  title: string;
-  onPress: () => void;
+  onPress?: () => void;
+  className?: string;
+  children?: React.ReactNode;
 };
 
-export default function Button({ title, onPress }: ButtonProps) {
+export default function Button({ onPress, className, children }: ButtonProps) {
   return (
-    <TouchableOpacity
-      className="bg-sky-600 text-white px-4 py-2 rounded-lg mx-2 w-full"
-      onPress={onPress}
-    >
+    <TouchableOpacity className={`${className}`} onPress={onPress}>
       <Text className="text text-center text-gray-50 font-medium tracking-wider">
-        {title}
+        {children}
       </Text>
     </TouchableOpacity>
   );

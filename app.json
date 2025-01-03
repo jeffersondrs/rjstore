@@ -20,7 +20,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.yourcompany.yourappname"
+      "package": "com.jeffersondrs.rjstore"
     },
     "web": {
       "favicon": "./assets/favicon.png",
@@ -30,6 +30,9 @@
       "eas": {
         "projectId": "5d434894-e97b-4e57-b35e-62919172d7e4"
       }
-    }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }

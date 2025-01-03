@@ -6,6 +6,7 @@ import {
   Banner,
   Splash,
   Range,
+  Button,
 } from '../components';
 import { FlashList } from '@shopify/flash-list';
 import { data as products, categoryData } from '../utils/data';
@@ -21,6 +22,7 @@ const Index = observer(() => {
             data={products}
             renderItem={({ item }) => (
               <CardProduct
+                id={item.id}
                 title={item.name}
                 price={item.price}
                 urlImage={item.url}
@@ -39,14 +41,11 @@ const Index = observer(() => {
         <View className="w-full rounded-xl relative">
           <Banner />
         </View>
-        <View className="w-full flex flex-col justify-center items-center py-2">
-          <Link
-            href="/(tabs)"
-            className="text-gray-50 font-bold text-lg rounded-sm py-2 bg-black w-40 text-center"
-          >
+        <Button className="text-gray-50 font-bold text-lg rounded-sm py-2 bg-black w-40 text-center mx-auto">
+          <Link href="/(tabs)" className="">
             Ver mais
           </Link>
-        </View>
+        </Button>
         <View>
           <Range title="Frete Grátis" icon="truck-fast" />
         </View>
